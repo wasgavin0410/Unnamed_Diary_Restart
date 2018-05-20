@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/theIcon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/theChatBox"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/theChatBox"
+        app:srcCompat="@drawable/cafe" />
+
+    <ImageView
+        android:id="@+id/theChatBox"
+        android:layout_width="300dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@id/theIcon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/chatbox" />
+
+    <TextView
+        android:id="@+id/messageView"
+        android:layout_width="175dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:text="Say something..."
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:scrollbars="vertical"
+
+        app:layout_constraintBottom_toBottomOf="@id/theChatBox"
+        app:layout_constraintEnd_toEndOf="@id/theChatBox"
+        app:layout_constraintStart_toStartOf="@id/theChatBox"
+        app:layout_constraintTop_toTopOf="parent" />
+</android.support.constraint.ConstraintLayout>
