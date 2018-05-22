@@ -15,7 +15,6 @@ public class writingPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
        setContentView(R.layout.activity_writing_page);
-//        setContentView(R.layout.activity_w);
         db = new theDataBase(this);
         Button btn = findViewById(R.id.btn);
 
@@ -24,8 +23,8 @@ public class writingPage extends AppCompatActivity {
             public void onClick(View v) {
 
                 EditText printing = findViewById(R.id.printing);
-                String intput = printing.getText().toString();
-                db.insert(intput);
+                String input = printing.getText().toString();
+                db.insert(input);
                 Intent i = new Intent(writingPage.this,main_diaryPage.class);
                 startActivity(i);
                 writingPage.this.finish();//結束目前Activity

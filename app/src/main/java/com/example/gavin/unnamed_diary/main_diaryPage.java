@@ -14,7 +14,7 @@ import java.util.ArrayList;
 /*
 * TODO
 *
-* 換頁動畫  SQL or SharedPreference?反正選一個可以儲存ArrayList的
+* 換頁動畫  MessageDeleting
 * */
 
 
@@ -43,7 +43,7 @@ public class main_diaryPage extends AppCompatActivity {
         showing_boxes.setLayoutManager(new LinearLayoutManager(this));
         adapting.notifyDataSetChanged();
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -70,13 +70,15 @@ public class main_diaryPage extends AppCompatActivity {
         String reading = "SELECT * FROM diary_table";
         c_atMain = db_helper.database.rawQuery(reading,null);
 
-        if (c_atMain.getCount() == 0){
-
-            db_helper.insert("TEST");
-            db_helper.insert("TEST2");
-            c_atMain = db_helper.database.rawQuery(reading,null);
-
-        }
+//        if (c_atMain.getCount() == 0){
+//
+//            db_helper.insert("TEST");
+//            db_helper.insert("TEST2");
+//            c_atMain = db_helper.database.rawQuery(reading,null);
+//
+//        }
+//        ^^^^^^^^^^^^^^^^^^^^^^
+//        Testing Code Above
 
         if (c_atMain.moveToFirst()){
 

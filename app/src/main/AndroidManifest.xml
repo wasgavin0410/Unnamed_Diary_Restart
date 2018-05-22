@@ -20,6 +20,8 @@
         </activity>
         <activity android:name=".main_diaryPage" />
         <activity android:name=".writingPage"></activity>
+        <activity android:name=".input_password" />
+        <activity android:name=".set_password" />
     </application>
 
 </manifest>
